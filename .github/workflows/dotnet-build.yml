@@ -26,4 +26,4 @@ jobs:
       run: dotnet restore github4women/github4women.csproj
 
     - name: Compilar
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build github4women/github4women.csproj --configuration Release --no-restore
