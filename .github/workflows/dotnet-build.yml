@@ -1,4 +1,4 @@
-name: dotnet-buid
+name: dotnet-build
 
 on:
   push:
@@ -25,5 +25,5 @@ jobs:
     - name: Restaurar dependencias
       run: dotnet restore
 
-    - name: Build
-      run: dotnet build -- configuration Release --no-restore
+    - name: Compilar
+      run: dotnet build --configuration Release --no-restore
