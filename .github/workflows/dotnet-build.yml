@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restaurar dependencias
+    - name: Restaurar dependências
       run: dotnet restore github4women/github4women.csproj
 
     - name: Compilar
