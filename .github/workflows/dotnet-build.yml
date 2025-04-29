@@ -1,0 +1,29 @@
+name: dotnet-buid
+
+on:
+  push:
+    branches: [ "main" ]
+    
+  schedule:
+    - cron: '0 * * * *'
+  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Obter codigo do repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar o ambiente
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restaurar dependencias
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
